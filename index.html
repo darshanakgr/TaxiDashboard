@@ -1,0 +1,117 @@
+<html>
+
+<head>
+	<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+	<title>MapViz</title>
+	<meta content="authenticity_token" name="csrf-param" />
+	<meta content="KBMKnq2mgWk2FlUbFQoRaBnsvQ62aaAuZLJcqY1Io7c=" name="csrf-token" />
+	<meta name="description" content="Singapore population distribution by housing type">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="icon" href="img/Maps-icon.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='css/mapbox.css' >
+	<link rel="stylesheet" type="text/css" href="css/map_style.css">
+	<link rel="stylesheet" href="css/leaflet.css">
+	<link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
+
+	<!-- plus a jQuery UI theme, here I use "flick" -->
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+	
+	<style>
+		#navigationList a:hover {
+			background-color: #CCC;
+		}
+
+		body {
+			/* 			background-color: #D078BB; */
+			background-image: url("img/next-border.jpg");
+			background-attachment: fixed;
+		}
+
+		.box {
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		#sliderBars {
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		.legend {
+			line-height: 18px;
+			color: #555;
+		}
+
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 1;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="row">
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-lg-8 col-md-9 col-sm-9 col-xs-12 text-center">
+					<div class="background-dark">
+						<h2 style="color: #285F8E" id="title">Vector ARMA / Linear Regression Models</h2>
+					</div>
+					<div id="map" class="box"
+						style='margin-left: 10px; border: 1px solid; border-color: #3c546d; border-radius: 7px; width: 100%; height: 80%; background-image: url("img/1PFHyYy.jpg");'>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-3 col-sm-3 text-left" id="rightSpace" style="padding-right: 30px">
+					<div id="sliderBars" style="margin-top: 100px; border: 1px solid; border-color: #285F8E; border-radius: 7px; ">
+						<div class="row">
+							<div style="padding: 25px">
+								<select id="distribution" class="form-control">
+									<option value="0">Trips</option>
+									<option value="1">Egress</option>
+									<option value="2">Ingress</option>
+									<option value="3">Single Models</option>
+									<option value="4">Period wise Models</option>
+									<option value="5">Day wise Models</option>
+									<!-- <option value="6">Combined Models</option> -->
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div style="padding: 25px">
+								<button class="btn btn-info form-control" onclick="makeActive()">Show</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src='js/mapbox.js'></script>
+	<script src="js/leaflet.js"></script>
+	<script src="js/leaflet.curve.js"></script>
+	<script src="js/subzones.js"></script>
+	<script src="js/subzones2.js"></script>
+	<script src="js/selected_zones.js"></script>
+	<script src="js/zone_trips.js"></script>
+	<script src="js/rmse_single.js"></script>
+	<script src="js/zone_map_menusha.js"></script>
+
+	<script src="js/jquery-ui-slider-pips.js"></script>
+	<script src="js/leaflet.awesome-markers.js"></script>
+
+	<script src="js/fuse.js"></script>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+
+</body>
+
+</html>
